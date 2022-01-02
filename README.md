@@ -27,8 +27,8 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
     <li>E_value</li>
   </ul>
   
-  <li>Se condensa la información genómica a nivel de BGC, promediando las métricas <i>identity_percent</i>, <i>Coverage_percent</i>, <i>BLAST_Score</i> y <i>E_value</i> y añadendo como atributo el número de genes que componen a cada BGC, resultando:
-    <ul>
+  <li>Se condensa la información genómica a nivel de BGC, promediando las métricas <i>identity_percent</i>, <i>Coverage_percent</i>, <i>BLAST_Score</i> y <i>E_value</i>, añadendo como atributo el número de genes que componen a cada BGC, resultando:
+   <ul>
     <li>user_BGC</li>
     <li>CEPA</li>
     <li>REGION</li>
@@ -40,7 +40,25 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
     <li>E_value</li>
   </ul>
     
-  <li>Se compará el listado de BGC resultantes con los contenidos en <i>matched_mibig_gnps_update.csv</i> (rescatado de <a href="https://github.com/sdrogers/nplinker">NPLinker</a>), filtrando aquellos que no estén contenidos en el archivo interno.</li>
+  <li>Se compará el listado de BGC resultantes con los contenidos en <i>matched_mibig_gnps_update.csv</i> (rescatado de <a href="https://github.com/sdrogers/nplinker">NPLinker</a>), filtrando aquellos que no estén contenidos en el archivo interno. Por su parte, los elementos que si están contenidos se les añade los atributos <i>mibig_inchi</i>, <i>mibig_smiles</i> y <i>mibig_name</i>, resultando en:
+  <ul>
+    <li>user_BGC</li>
+    <li>CEPA</li>
+    <li>REGION</li>
+    <li>N_gen</li>
+    <li>MIBIG_ID</li>
+    <li>identity_percent</li>
+    <li>Coverage_percent</li>
+    <li>BLAST_Score</li>
+    <li>E_value</li>
+    <li>mibig_inchi</li>
+    <li>mibig_smiles</li>
+    <li>mibig_name</li>
+  </ul>
+   
+  
+  
+  </li>
   
   <li>aaa</li>
   
