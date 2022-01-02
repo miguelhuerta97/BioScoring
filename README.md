@@ -15,7 +15,7 @@ Empleando como información de entrada el análisis efectuado por [GNPS](https:/
 
 ## Referencias y desarrollos empleados 
 La estructura propuesta basa su desarrollo:
-- [NPLinker](https://github.com/sdrogers/nplinker), utilizando parte del código y base de datos para el tratamiento de datos de entrada.
-- [cdk_pywrapper](https://github.com/sebotic/cdk_pywrapper), utilizando su desarrollo para identificar los _fingerprint_ de los datos rescatados de [NPLinker](https://github.com/sdrogers/nplinker).
+- [NPLinker](https://github.com/sdrogers/nplinker) utilizando parte del código y base de datos para el tratamiento de datos de entrada.
+- [cdk_pywrapper](https://github.com/sebotic/cdk_pywrapper) utilizando su desarrollo para identificar los _fingerprint_ de los datos rescatados de [NPLinker](https://github.com/sdrogers/nplinker).
 
 
