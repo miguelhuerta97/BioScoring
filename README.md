@@ -83,7 +83,9 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
     <li>Id</li>
   </ul>
   </li>
-  aaaaaaaaaaaaaaaaaaaaa
+  Este <i>dataframe</i> es exportado en formato CSV con el nombre <i>output.csv</i>.
+  
+  
   
   <li>Concluido el procesamiento de datos, la propuesta procede a establecer el frente de pareto estableciendo por defecto la relación <i>identity_percent</i> y <i>simil_cos</i>,  </li>
   
