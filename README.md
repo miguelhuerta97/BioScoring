@@ -11,6 +11,7 @@ Empleando como información de entrada el análisis efectuado por [GNPS](https:/
 
 
 ## Flujo de trabajo
+Por como esta configurada la propuesta, está efectua la lectura, filtrado y verificación de archivos necesarios dejados en la carpeta /input/ del proyecto, con lo cúal solo es necesario extraer todos los archivos de [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) en la carpeta /input/ y los de [antiSMASH](https://antismash.secondarymetabolites.org/#!/start) en una subcarpeta /input/antismash/.
 
 
 ## Referencias y desarrollos empleados 
