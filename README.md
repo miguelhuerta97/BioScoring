@@ -40,7 +40,7 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
     <li>E_value</li>
   </ul>
     
-  <li>Se compará el listado de BGC resultantes con los contenidos en <i>matched_mibig_gnps_update.csv</i> (rescatado de <a href="https://github.com/sdrogers/nplinker">NPLinker</a>), filtrando aquellos que no estén contenidos en el archivo interno. Por su parte, los elementos que si están contenidos se les añade los atributos <i>mibig_inchi</i>, <i>mibig_smiles</i> y <i>mibig_name</i>, resultando en:
+  <li>Se compará el listado de BGC resultantes con los contenidos en <i>matched_mibig_gnps_update.csv</i> (rescatado de <a href="https://github.com/sdrogers/nplinker">NPLinker</a>), filtrando aquellos que no estén contenidos en el archivo interno. Por su parte, los elementos que si están contenidos se les añade los atributos <i>mibig_inchi</i>, <i>mibig_smiles</i> y <i>mibig_name</i> (equivalente al compuesto), resultando en:
   <ul>
     <li>user_BGC</li>
     <li>CEPA</li>
@@ -55,12 +55,11 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
     <li>mibig_smiles</li>
     <li>mibig_name</li>
   </ul>
-   
-  
-  
   </li>
   
-  <li>aaa</li>
+  <li>Sujeto a lo anterior, <i>matched_mibig_gnps_update.csv</i> está caracterizado con incluir la relación (link) entre un número acotado de BGC con un número acotado de espectrogramas, indicando el compuesto generado. En consecuencia, aplicado el filtro del punto anterior se establece un grado de similitud entre los BGC del usuario con los de este listado (a través de los atributos <i>identity_percent</i>, <i>Coverage_percent</i>, <i>BLAST_Score</i> y <i>E_value</i>) y en consecuencia con un número acotado de espectrogramas. Bajo esta idea, empleando como métrica <a href="https://en.wikipedia.org/wiki/Cosine_similarity"><i>Cosine similarity</i></a>, se establece el nivel de correlación entre los espectrogramas del usuario (provenientes de <a href="https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp">GNPS</a>) con los 
+    
+  </li>
   
   
 </ol>
