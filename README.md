@@ -57,8 +57,32 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
   </ul>
   </li>
   
-  <li>Sujeto a lo anterior, <i>matched_mibig_gnps_update.csv</i> está caracterizado con incluir la relación (link) entre un número acotado de BGC con un número acotado de espectrogramas, indicando el compuesto generado. En consecuencia, aplicado el filtro del punto anterior se establece un grado de similitud entre los BGC del usuario con los de este listado (a través de los atributos <i>identity_percent</i>, <i>Coverage_percent</i>, <i>BLAST_Score</i> y <i>E_value</i>) y en consecuencia con un número acotado de espectrogramas. Bajo esta idea, empleando como métrica <a href="https://en.wikipedia.org/wiki/Cosine_similarity"><i>Cosine similarity</i></a>, se establece el nivel de correlación entre los espectrogramas del usuario (provenientes de <a href="https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp">GNPS</a>) con los 
-    
+  <li>Sujeto a lo anterior, <i>matched_mibig_gnps_update.csv</i> está caracterizado con incluir la relación (link) entre un número acotado de BGC con un número acotado de espectrogramas, indicando el compuesto generado. En consecuencia, aplicado el filtro del punto anterior se establece un grado de similitud entre los BGC del usuario con los de este listado (a través de los atributos <i>identity_percent</i>, <i>Coverage_percent</i>, <i>BLAST_Score</i> y <i>E_value</i>) y en consecuencia con un número acotado de espectrogramas. Bajo esta idea, empleando como métrica <a href="https://en.wikipedia.org/wiki/Cosine_similarity"><i>Cosine similarity</i></a> se establece el nivel de correlación entre los espectrogramas del usuario (provenientes de <a href="https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp">GNPS</a>) con los asociados a los BGC predichos ya filtrados, añadiendo como atributos los asociados al análisis de espectrometría. 
+  <ul>
+    <li>user_BGC</li>
+    <li>CEPA</li>
+    <li>REGION</li>
+    <li>N_gen</li>
+    <li>MIBIG_ID</li>
+    <li>identity_percent</li>
+    <li>Coverage_percent</li>
+    <li>BLAST_Score</li>
+    <li>E_value</li>
+    <li>mibig_inchi</li>
+    <li>mibig_smiles</li>
+    <li>mibig_name</li>
+    <li>user_clustersumID</li>
+    <li>user_SpectraID</li>
+    <li>user_Strains</li>
+    <li>gnps_key</li>
+    <li>gnps_inchi</li>
+    <li>gnps_smiles</li>
+    <li>gnps_id</li>
+    <li>gnps_SpectraID</li>
+    <li>simil_cos</li>
+    <li></li>
+    <li>Id</li>
+  </ul>
   </li>
   
   
