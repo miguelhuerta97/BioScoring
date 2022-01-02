@@ -26,7 +26,19 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
     <li>BLAST_Score</li>
     <li>E_value</li>
   </ul>
-  <li>Tea</li>
+  
+  <li>Se condensa la información genómica a nivel de BGC, promediando las métricas <i>identity_percent</i>, <i>Coverage_percent</i>, <i>BLAST_Score</i> y <i>E_value</i> y añadendo como atributo el número de genes que componen a cada BGC, resultando:
+    <ul>
+    <li>user_BGC</li>
+    <li>CEPA</li>
+    <li>REGION</li>
+    <li>N_gen</li>
+    <li>MIBIG_ID</li>
+    <li>identity_percent</li>
+    <li>Coverage_percent</li>
+    <li>BLAST_Score</li>
+    <li>E_value</li>
+  </ul>
   <li>Milk</li>
 </ol>
 
