@@ -15,7 +15,7 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
 
 <ol>
   <li>Coffee</li>
-  <ul>
+  <ul style="list-style-type:square">
     <li>Coffee</li>
     <li>Tea</li>
     <li>Milk</li>
