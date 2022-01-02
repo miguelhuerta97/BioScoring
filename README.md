@@ -40,8 +40,10 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
     <li>E_value</li>
   </ul>
     
-  <li>Se compará el listado de BGC resultantes con los contenidos en <i>matched_mibig_gnps_update.csv</i> (rescatado de [NPLinker](https://github.com/sdrogers/nplinker))</li>
+  <li>Se compará el listado de BGC resultantes con los contenidos en <i>matched_mibig_gnps_update.csv</i> (rescatado de <a href="https://github.com/sdrogers/nplinker">NPLinker</a>)</li>
 </ol>
+
+
 
 ## Referencias y desarrollos empleados 
 La estructura propuesta basa su desarrollo:
