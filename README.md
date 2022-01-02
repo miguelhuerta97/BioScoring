@@ -84,12 +84,15 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
   </ul>
   </li>
   
+  <li>Concluido el procesamiento de datos, la propuesta procede a establecer el frente de pareto estableciendo por defecto la relación <i>identity_percent</i> y <i>simil_cos</i>,  </li>
+  
+  <li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> c</li>
   
 </ol>
 
 
 
-Asociado al punto (4), la propuesta por defecto rescata unicamente aquel esprectrograma con mayor indice de similitud. Para desactivar dicha función se debe cambiar la opción _MaxCosSimil_ a False en la función _CreateGraph_.
+Asociado al punto (4), la propuesta por defecto rescata unicamente aquel esprectrograma con mayor indice de similitud. Para desactivar dicha función se debe cambiar la opción _MaxCosSimil_ a False en la función _CreateGraph_. En lo que respecta a los archivos de salida, estos se guardan en la carpeta /output/ generada en la carpeta del proyecto.
 
 
 
