@@ -1,5 +1,6 @@
 # Bio-Scoring
-Desarrollo enfocado a predecir el compuesto empleando métricas desde genómicas y de espectrometría.
+Desarrollo enfocado en la predicción de compuestos por medio del cáculo de métricas a partir de los datos obtenidos del análisis genómico y de espectrometría. 
+
 Para ello se emplean las predicciones tabuladas (en formato html) de antiSmash en conjunto al archivo de salida de GNPS. Concretamente son necesarios el siguiente listado archivos:
   - Los archivos adjuntos en la carpeta /knownclusterblast/, resultate de antiSmash.
   - El archivo clustersummary resultate de GNPS.
