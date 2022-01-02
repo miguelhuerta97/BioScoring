@@ -89,7 +89,7 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
 
 
 
-Asociado al punto (4), la propuesta por defecto rescata unicamente aquel esprectrograma con mayor indice de similitud. Para desactivar dicha función se debe cambiar la opción _MaxCosSimil_ a False en la función _OutputFile_.
+Asociado al punto (4), la propuesta por defecto rescata unicamente aquel esprectrograma con mayor indice de similitud. Para desactivar dicha función se debe cambiar la opción _MaxCosSimil_ a False en la función _CreateGraph_.
 
 
 
