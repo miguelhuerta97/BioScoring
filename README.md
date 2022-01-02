@@ -18,6 +18,13 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
   <li>Tea</li>
   <li>Milk</li>
 </ul>
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+
 
 1) Ordena y agrupa todas las tablas html en un único _dataframe_, el cual esta constituido por:
   -  a
