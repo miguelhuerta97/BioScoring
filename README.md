@@ -14,7 +14,7 @@ Empleando como información de entrada el análisis efectuado por [GNPS](https:/
 Por como esta configurada la propuesta, está efectua la lectura, filtrado y verificación de archivos necesarios dejados en la carpeta /input/ del proyecto, de modo que solo es necesario extraer todos los archivos de [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) en la carpeta /input/ y los de [antiSMASH](https://antismash.secondarymetabolites.org/#!/start) en una subcarpeta /input/antismash/. Realizada la lectura de datos, la propuesta opera como sigue:
 
 <ol>
-  <li>Ordena y agrupa todas las tablas html en un único _dataframe_, el cual esta constituido por:</li>
+  <li>Ordena y agrupa todas las tablas html en un único <i>dataframe</i>, el cual esta constituido por:</li>
   <ul>
     <li>user_BGC</li>
     <li>CEPA</li>
