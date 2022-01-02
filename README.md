@@ -6,8 +6,8 @@ Empleando como información de entrada el análisis efectuado por [antiSMASH](ht
 
 ## Genómica
 Empleando como información de entrada el análisis efectuado por [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) por medio su plataforma web, la propuesta centra sus esfuerzos en la lectura y cálculo de métricas por medio de la comparación con espectrogramas internos de la propuesta. Para evaluar el nivel de correlación entre espectrogramas se empleó la [_Cosine similarity_](https://en.wikipedia.org/wiki/Cosine_similarity). Concretamente, los archivos necesarios poseen como extensión:
-  - El archivo clustersummary.
-  - El archivo METABOLOMICS.mgf.
+  - clustersummary.
+  - METABOLOMICS.mgf.
 
 
 ## Flujo de trabajo
