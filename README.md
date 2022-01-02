@@ -80,13 +80,17 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
     <li>gnps_id</li>
     <li>gnps_SpectraID</li>
     <li>simil_cos</li>
-    <li></li>
     <li>Id</li>
   </ul>
   </li>
   
   
 </ol>
+
+
+
+Asociado al punto (4), la propuesta por defecto rescata unicamente aquel esprectrograma con mayor indice de similitud. Para desactivar dicha función se debe cambiar la opción _MaxCosSimil_ a False en la función _OutputFile_.
+
 
 
 
