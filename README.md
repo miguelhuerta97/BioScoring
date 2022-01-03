@@ -4,6 +4,35 @@ Desarrollo enfocado en la predicción de compuestos por medio del cáculo de mé
 ## Espectrometría
 Empleando como información de entrada el análisis efectuado por [antiSMASH](https://antismash.secondarymetabolites.org/#!/start) por medio su plataforma web, la propuesta enfoca sus esfuerzos en el procesamiento de las predicciones tabuladas en formato html, adjuntas en la carpeta /knownclusterblast/ relativa a cada cepa incluida en el análisis.
 
+    .
+    ├── input
+    │   ├── antismash
+    │   │   ├── CEPA_1
+    │   │   │   ├── knownclusterblast 
+    │   │   │   │   ├── region1
+    │   │   │   │   │   ├── table_1....html
+    │   │   │   │   │   ├── table_2....html
+    │   │   │   │   │   ├── ...
+    │   │   │   │   ├── region2
+    │   │   │   │   │   ├── table_1....html
+    │   │   │   │   │   ├── table_2....html
+    │   │   │   │   │   ├── ...
+    │   │   │   │   ├── ...
+    │   │   ├── CEPA_2
+    │   │   │   ├── knownclusterblast 
+    │   │   │   │   ├── region1
+    │   │   │   │   │   ├── table_1....html
+    │   │   │   │   │   ├── table_2....html
+    │   │   │   │   │   ├── ...
+    │   │   │   │   ├── region2
+    │   │   │   │   │   ├── table_1....html
+    │   │   │   │   │   ├── table_2....html
+    │   │   │   │   │   ├── ...
+    │   │   │   │   ├── ...
+    │   │   ├── ......
+    └── ...
+
+
 ## Genómica
 Empleando como información de entrada el análisis efectuado por [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) por medio su plataforma web, la propuesta centra sus esfuerzos en la lectura y cálculo de métricas por medio de la comparación con espectrogramas internos de la propuesta. Para evaluar el nivel de correlación entre espectrogramas se empleó la [_Cosine similarity_](https://en.wikipedia.org/wiki/Cosine_similarity). Concretamente, los archivos necesarios poseen como extensión:
   - clustersummary.
@@ -16,7 +45,10 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
     .
     ├── input
     │   ├── antismash          # Load and stress tests
-    │   │   ├── integration    # End-to-end, integration tests (alternatively `e2e`)
+    │   │   ├── CEPA_1    # End-to-end, integration tests (alternatively `e2e`)
+    │   │   ├── CEPA_2    # End-to-end, integration tests (alternatively `e2e`)
+    │   │   ├── CEPA_3    # End-to-end, integration tests (alternatively `e2e`)
+    │   │   ├── ......    # End-to-end, integration tests (alternatively `e2e`)
     │   └── unit               # Unit tests
     └── ...
 
