@@ -146,14 +146,7 @@ Realizada la lectura de datos, se opera como sigue:
   
 
     
-  <li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> con el nombre <i>results.graphml</i> </li>
-    
-    .
-    ├── input
-    └── output
-        ├── output.csv
-        └── results.graphml
-    
+  <li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> con el nombre <i>results.graphml</i> </li>    
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns">
@@ -170,6 +163,14 @@ Realizada la lectura de datos, se opera como sigue:
     <key attr.name="weight" attr.type="double" for="edge" id="weight"/>
     ....
 ```
+    
+    En consecuencia, los archivos de salida son
+    
+    .
+    ├── input
+    └── output
+        ├── output.csv
+        └── results.graphml
   
     
     
