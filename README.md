@@ -174,7 +174,7 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
     
 
     
-<li>Si se desea visualizar la red generada se ha desarrllado una función por medio de la herramienta <a href="https://networkx.org/documentation/stable/index.html"><i>NetworkX</i></a>, la cual <i>show</i> </li>
+<li>Si se desea visualizar la red generada se ha desarrollado una función por medio de la herramienta <a href="https://networkx.org/documentation/stable/index.html"><i>NetworkX</i></a>, la cual <i>show</i> </li>
 
 <ol>
 <li> Aplicar distribución "Fruchterman Reingold" default, escalar y centrar.</li>
@@ -190,17 +190,8 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
   </ul>   
 <li>Mostrar etiquetas de nodos.  </li>
 </ol>
-    
-    
-    
 </ol>
     
-
-
-
-
-
-
 ## Instalación y puesta en marcha
 Para utilizar la herramienta, es necesario descargar el proyecto y tenerlo localmente. Una alternativa es utilizar el siguiente comando.
     
