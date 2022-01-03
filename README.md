@@ -153,7 +153,7 @@ Realizada la lectura de datos, se opera como sigue:
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns">
     <key attr.name="id" attr.type="string" for="node" id="id"/>            # user_BGC
     <key attr.name="product" attr.type="string" for="node" id="product"/>  # mibig_name
-    <key attr.name="pindex" attr.type="int" for="node" id="pindex"/>       # pareto index
+    <key attr.name="pindex" attr.type="int" for="node" id="pindex"/>       # pareto_index
     <key attr.name="label" attr.type="string" for="node" id="label"/>      # mibig_name
     <key attr.name="size" attr.type="float" for="node" id="size"/>         # gephinodesize
     <key attr.name="r" attr.type="int" for="node" id="r"/>                 # 0-255
@@ -164,7 +164,7 @@ Realizada la lectura de datos, se opera como sigue:
     <key attr.name="weight" attr.type="double" for="edge" id="weight"/>    # internal_score*gephiedgescale
     ....
 ```
-
+donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustables por el usuario. 
     
 En consecuencia, los archivos de salida son
     
