@@ -1,4 +1,4 @@
-# Bio-Scoring
+# BioScoring
 Desarrollo enfocado en la predicción de compuestos por medio del cáculo de métricas a partir de los datos obtenidos del análisis genómico y de espectrometría. 
 
 ## Espectrometría
