@@ -177,7 +177,7 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
 <li>Si se desea visualizar la red generada se ha desarrollado una función por medio de la herramienta <a href="https://networkx.org/documentation/stable/index.html"><i>NetworkX</i></a>, la cual <i>show</i> </li>
 
 <ol>
-<li> Aplicar distribución "Fruchterman Reingold" default, escalar y centrar.</li>
+<li> Aplicar distribución <i>"Fruchterman Reingold"</i> default, escalar y centrar.</li>
 <li> Aplicar apariencia nodos: </li>
   <ul>
     <li>Color --> Particion -> Product</li>
