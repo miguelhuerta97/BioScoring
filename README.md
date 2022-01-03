@@ -161,7 +161,7 @@ Realizada la lectura de datos, se opera como sigue:
     <key attr.name="b" attr.type="int" for="node" id="b"/>                 # 0-255
     <key attr.name="x" attr.type="float" for="node" id="x"/>               # scoreX value
     <key attr.name="y" attr.type="float" for="node" id="y"/>               # scoreY value (simil_cos)
-    <key attr.name="weight" attr.type="double" for="edge" id="weight"/>    # value 
+    <key attr.name="weight" attr.type="double" for="edge" id="weight"/>    # internal_score*gephiedgescale
     ....
 ```
 
