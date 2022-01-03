@@ -55,8 +55,7 @@ class CreateGraph:
     NAME = self.dfx['user_BGC'].values  
     PRODUCT = self.dfx['mibig_product'].values
     print(' (3) Impresión archivo graphml ...')  
-    gmlfn=self.metrics.OutputPath+os.path.sep+'Python_results.graphml'
-    # gmlfn=self.metrics.OutputPath+os.path.sep+'results.graphml'
+    gmlfn=self.metrics.OutputPath+os.path.sep+'results.graphml'
     print('       escribiendo archivo "%s"\n'%(gmlfn))
     fid = open(gmlfn, "a")
     fid.write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>\n')
