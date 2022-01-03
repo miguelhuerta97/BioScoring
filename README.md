@@ -142,9 +142,7 @@ Realizada la lectura de datos, la propuesta opera como sigue:
     <li>BLAST_Score</li>
     <li>E_value</li>
   </ul>
-    
-    
-    </li>
+  </li>
   
 
     
