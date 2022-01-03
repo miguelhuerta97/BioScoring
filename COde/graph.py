@@ -14,7 +14,7 @@ class CreateGraph:
     else:
       self.df  = self.metrics.OutputFile(MaxCosSimil=MaxCosSimil)
     print('Los strains dispinibles son: ', list(self.df['CEPA'].unique()))
-    self.mat = scipy.io.loadmat('./proposal/data/matrix_internal_map.mat'.replace('/',os.path.sep))['num'][1:,1:]
+    self.mat = scipy.io.loadmat('./COde/data/matrix_internal_map.mat'.replace('/',os.path.sep))['num'][1:,1:]
 
   def __call__(self, strain, scoreX='identity_percent'):
     self.BST_Pareto(strain, scoreX=scoreX)
