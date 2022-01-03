@@ -165,7 +165,7 @@ Realizada la lectura de datos, se opera como sigue:
     ....
 ```
     
-    En consecuencia, los archivos de salida son
+En consecuencia, los archivos de salida son
     
     .
     ├── input
