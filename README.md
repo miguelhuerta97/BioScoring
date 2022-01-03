@@ -4,35 +4,35 @@ Desarrollo enfocado en la predicción de compuestos por medio del cáculo de mé
 ## Espectrometría
 Empleando como información de entrada el análisis efectuado por [antiSMASH](https://antismash.secondarymetabolites.org/#!/start) por medio su plataforma web, la propuesta enfoca sus esfuerzos en el procesamiento de las predicciones tabuladas en formato html, adjuntas en la carpeta /knownclusterblast/ relativa a cada cepa incluida en el análisis.
 
-.
-├── input
-│   ├── antismash
-│   │   ├── CEPA_1
-│   │   │   ├── knownclusterblast 
-│   │   │   │   ├── region1
-│   │   │   │   │   ├── table_1....html
-│   │   │   │   │   ├── table_2....html
-│   │   │   │   │   └── ...
-│   │   │   │   ├── region2
-│   │   │   │   │   ├── table_1....html
-│   │   │   │   │   ├── table_2....html
-│   │   │   │   │   └── ...
-│   │   │   │   └── ...
-│   │   ├── CEPA_2
-│   │   │   ├── knownclusterblast 
-│   │   │   │   ├── region1
-│   │   │   │   │   ├── table_1....html
-│   │   │   │   │   ├── table_2....html
-│   │   │   │   │   └── ...
-│   │   │   │   ├── region2
-│   │   │   │   │   ├── table_1....html
-│   │   │   │   │   ├── table_2....html
-│   │   │   │   │   └── ...
-│   │   │   │   └── ...
-│   │   │   └── ......
-│   │   └── ......
-│   └── ......
-└── ...
+  .
+  ├── input
+  │   ├── antismash
+  │   │   ├── CEPA_1
+  │   │   │   ├── knownclusterblast 
+  │   │   │   │   ├── region1
+  │   │   │   │   │   ├── table_1....html
+  │   │   │   │   │   ├── table_2....html
+  │   │   │   │   │   └── ...
+  │   │   │   │   ├── region2
+  │   │   │   │   │   ├── table_1....html
+  │   │   │   │   │   ├── table_2....html
+  │   │   │   │   │   └── ...
+  │   │   │   │   └── ...
+  │   │   ├── CEPA_2
+  │   │   │   ├── knownclusterblast 
+  │   │   │   │   ├── region1
+  │   │   │   │   │   ├── table_1....html
+  │   │   │   │   │   ├── table_2....html
+  │   │   │   │   │   └── ...
+  │   │   │   │   ├── region2
+  │   │   │   │   │   ├── table_1....html
+  │   │   │   │   │   ├── table_2....html
+  │   │   │   │   │   └── ...
+  │   │   │   │   └── ...
+  │   │   │   └── ......
+  │   │   └── ......
+  │   └── ......
+  └── ...
 
 
 ## Genómica
@@ -43,18 +43,18 @@ Empleando como información de entrada el análisis efectuado por [GNPS](https:/
 ## Flujo de trabajo
 Por como esta configurada la propuesta, está efectua la lectura, filtrado y verificación de archivos necesarios dejados en la carpeta /input/ del proyecto, de modo que solo es necesario extraer todos los archivos de [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) en la carpeta /input/ y los de [antiSMASH](https://antismash.secondarymetabolites.org/#!/start) en una subcarpeta /input/antismash/, quedando la siguiente estructura:
 
-    .
-    ├── input
-    │   ├── antismash
-    │   ├── clusterinfo
-    │   ├── clusterinfosummary...
-    │   │   └── ....clusterinfosummary
-    │   ├── gnps_molecular_network_graphml
-    │   ├── groupmapping_convertm
-    │   ├── qiime2_output
-    │   ├── result_specnets_DB
-    │   └── METABOLOMICS....mgf
-    └── ...
+  .
+  ├── input
+  │   ├── antismash
+  │   ├── clusterinfo
+  │   ├── clusterinfosummary...
+  │   │   └── ....clusterinfosummary
+  │   ├── gnps_molecular_network_graphml
+  │   ├── groupmapping_convertm
+  │   ├── qiime2_output
+  │   ├── result_specnets_DB
+  │   └── METABOLOMICS....mgf
+  └── ...
 
 Realizada la lectura de datos, se opera como sigue:
 
