@@ -12,24 +12,24 @@ Empleando como información de entrada el análisis efectuado por [antiSMASH](ht
     │   │   │   │   ├── region1
     │   │   │   │   │   ├── table_1....html
     │   │   │   │   │   ├── table_2....html
-    │   │   │   │   │   ├── ...
+    │   │   │   │   │   └── ...
     │   │   │   │   ├── region2
     │   │   │   │   │   ├── table_1....html
     │   │   │   │   │   ├── table_2....html
-    │   │   │   │   │   ├── ...
-    │   │   │   │   ├── ...
+    │   │   │   │   │   └── ...
+    │   │   │   │   └── ...
     │   │   ├── CEPA_2
     │   │   │   ├── knownclusterblast 
     │   │   │   │   ├── region1
     │   │   │   │   │   ├── table_1....html
     │   │   │   │   │   ├── table_2....html
-    │   │   │   │   │   ├── ...
+    │   │   │   │   │   └── ...
     │   │   │   │   ├── region2
     │   │   │   │   │   ├── table_1....html
     │   │   │   │   │   ├── table_2....html
-    │   │   │   │   │   ├── ...
-    │   │   │   │   ├── ...
-    │   │   ├── ......
+    │   │   │   │   │   └── ...
+    │   │   │   │   └── ...
+    │   │   └── ......
     └── ...
 
 
@@ -38,18 +38,24 @@ Empleando como información de entrada el análisis efectuado por [GNPS](https:/
   - clustersummary.
   - METABOLOMICS.mgf.
 
-
 ## Flujo de trabajo
 Por como esta configurada la propuesta, está efectua la lectura, filtrado y verificación de archivos necesarios dejados en la carpeta /input/ del proyecto, de modo que solo es necesario extraer todos los archivos de [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) en la carpeta /input/ y los de [antiSMASH](https://antismash.secondarymetabolites.org/#!/start) en una subcarpeta /input/antismash/, quedando la siguiente estructura:
 
     .
     ├── input
-    │   ├── antismash          # Load and stress tests
-    │   │   ├── CEPA_1    # End-to-end, integration tests (alternatively `e2e`)
-    │   │   ├── CEPA_2    # End-to-end, integration tests (alternatively `e2e`)
-    │   │   ├── CEPA_3    # End-to-end, integration tests (alternatively `e2e`)
-    │   │   ├── ......    # End-to-end, integration tests (alternatively `e2e`)
-    │   └── unit               # Unit tests
+    │   ├── antismash
+    │   │   ├── CEPA_1
+    │   │   ├── CEPA_2
+    │   │   └── ......
+    │   ├── clusterinfo
+    │   ├── clusterinfosumary...
+    │   │   └── ....clusterinfosumary
+    │   ├── gnps_molecular_network_graphml
+    │   ├── groupmapping_converted
+    │   ├── networkedges_selfloop
+    │   ├── qiime2_output
+    │   ├── result_specnets_DB
+    │   └── METABOLOMICS....mgf
     └── ...
 
 Realizada la lectura de datos, la propuesta opera como sigue:
