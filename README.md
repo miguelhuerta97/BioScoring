@@ -147,6 +147,7 @@ Realizada la lectura de datos, se opera como sigue:
 
     
   <li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> con el nombre <i>results.graphml</i> </li>    
+    
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns">
