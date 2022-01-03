@@ -153,27 +153,29 @@ Realizada la lectura de datos, se opera como sigue:
     └── output
         ├── output.csv
         └── results.graphml
+    
+    ```xml
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+    <graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+        <key attr.name="id" attr.type="string" for="node" id="id"/>
+        <key attr.name="product" attr.type="string" for="node" id="product"/>
+        <key attr.name="pindex" attr.type="int" for="node" id="pindex"/>
+        <key attr.name="label" attr.type="string" for="node" id="label"/>
+        <key attr.name="size" attr.type="float" for="node" id="size"/>
+        <key attr.name="r" attr.type="int" for="node" id="r"/>
+        <key attr.name="g" attr.type="int" for="node" id="g"/>
+        <key attr.name="b" attr.type="int" for="node" id="b"/>
+        <key attr.name="x" attr.type="float" for="node" id="x"/>
+        <key attr.name="y" attr.type="float" for="node" id="y"/>
+        <key attr.name="weight" attr.type="double" for="edge" id="weight"/>
+        ....
+    ```
   
     
     
 </ol>
 
-```xml
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
-    <key attr.name="id" attr.type="string" for="node" id="id"/>
-    <key attr.name="product" attr.type="string" for="node" id="product"/>
-    <key attr.name="pindex" attr.type="int" for="node" id="pindex"/>
-    <key attr.name="label" attr.type="string" for="node" id="label"/>
-    <key attr.name="size" attr.type="float" for="node" id="size"/>
-    <key attr.name="r" attr.type="int" for="node" id="r"/>
-    <key attr.name="g" attr.type="int" for="node" id="g"/>
-    <key attr.name="b" attr.type="int" for="node" id="b"/>
-    <key attr.name="x" attr.type="float" for="node" id="x"/>
-    <key attr.name="y" attr.type="float" for="node" id="y"/>
-    <key attr.name="weight" attr.type="double" for="edge" id="weight"/>
-    ....
-```
+
 
 
 ## Instalación y puesta en marcha
