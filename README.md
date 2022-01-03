@@ -29,7 +29,9 @@ Empleando como información de entrada el análisis efectuado por [antiSMASH](ht
     │   │   │   │   │   ├── table_2....html
     │   │   │   │   │   └── ...
     │   │   │   │   └── ...
+    │   │   │   └── ......
     │   │   └── ......
+    │   └── ......
     └── ...
 
 
@@ -137,6 +139,12 @@ Realizada la lectura de datos, la propuesta opera como sigue:
   <li>Concluido el procesamiento de datos, la propuesta procede a establecer el frente de pareto estableciendo por defecto la relación <i>identity_percent</i> y <i>simil_cos</i>,  </li>
   
   <li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> c</li>
+    
+    .
+    ├── input
+    └── output
+        ├── output.csv
+        └── results.graphml
   
 </ol>
 
