@@ -153,7 +153,8 @@ pip install ...
 ```python
 from proposal.graph import CreateGraph 
 path  = '..../project/'
-graph = CreateGraph(path) # default MaxCosSimil=True
+graph = CreateGraph(path, MaxCosSimil=True) # default MaxCosSimil=True 
+graph('CEPA', scoreX='identity_percent') # default MaxCosSimil='identity_percent'
 ```
 ## Referencias y desarrollos empleados 
 La estructura propuesta basa su desarrollo:
