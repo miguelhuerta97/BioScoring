@@ -178,11 +178,11 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
 
 ## Instalación y puesta en marcha
 ```bash
-git clone https://github.com/sdrogers/nplinker
+git clone https://github.com/miguelhuerta97/BioScoring
 ```
 
 ```python
-from proposal.graph import CreateGraph 
+from BioScoring.COde.graph import CreateGraph
 path  = '..../project/'
 # Procesamiento de datos (puntos 1-2-3-4)
 graph = CreateGraph(path, MaxCosSimil=True) # default MaxCosSimil=True 
