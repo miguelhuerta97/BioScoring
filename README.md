@@ -147,6 +147,10 @@ Asociado al punto (4), la propuesta por defecto rescata unicamente aquel esprect
 
 ## Instalación y puesta en marcha
 ```python
+pip install ...
+```
+
+```python
 from proposal.graph import CreateGraph 
 path  = '..../project/'
 graph = CreateGraph(path, MaxCosSimil=True)
