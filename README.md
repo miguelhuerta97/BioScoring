@@ -164,11 +164,13 @@ Realizada la lectura de datos, se opera como sigue:
     <key attr.name="weight" attr.type="double" for="edge" id="weight"/>    # internal_score*gephiedgescale
     ....
 ```
-donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustables por el usuario, mientras que la determinación del código de colores esta asociada a ranking dentro de la deteminación del frente de pareto. El atributo <i>weight</i> incluye en la solución el nivel de correlación entre los BGC del archivo <a href="https://github.com/miguelhuerta97/Bio-Scoring/blob/main/proposal/data/matched_mibig_gnps_update.csv"><i>matched_mibig_gnps_update.csv</i></a> empleando nuevamente <a href="https://en.wikipedia.org/wiki/Cosine_similarity"><i>Cosine similarity</i></a> sobre los <i>fingerprint</i>, tal como se describe en el documento <a href="https://github.com/miguelhuerta97/Bio-Scoring/blob/main/Smiles.ipynb"><i>Smiles.ipynb</i></a>.
+donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustables por el usuario, mientras que la determinación del código de colores esta asociada a ranking dentro de la deteminación del frente de pareto. El atributo <i>weight</i> incluye en la solución el nivel de correlación entre los BGC del archivo <a href="https://github.com/miguelhuerta97/Bio-Scoring/blob/main/proposal/data/matched_mibig_gnps_update.csv"><i>matched_mibig_gnps_update.csv</i></a> empleando nuevamente <a href="https://en.wikipedia.org/wiki/Cosine_similarity"><i>Cosine similarity</i></a> sobre los <i>fingerprint</i>, tal como se describe en el documento <a href="https://github.com/miguelhuerta97/Bio-Scoring/blob/main/Smiles.ipynb"><i>Smiles.ipynb</i></a>. Para la obtención de estas propiedades se empleó la herramienta href="https://github.com/sebotic/cdk_pywrapper"><i>cdk_pywrapper</i></a>.
 
 
     
 
+    
+    
     
 En consecuencia, los archivos de salida son
     
