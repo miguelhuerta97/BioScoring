@@ -174,10 +174,25 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
     
 
     
-<li>Si se desea visualizar la red generada se ha desarrllado una función por medio de la herramienta <a href="https://networkx.org/documentation/stable/index.html"><i>NetworkX</i></a>, la cual 
+<li>Si se desea visualizar la red generada se ha desarrllado una función por medio de la herramienta <a href="https://networkx.org/documentation/stable/index.html"><i>NetworkX</i></a>, la cual <i>show</i> </li>
+
+<ol>
+<li> Aplicar distribución "Fruchterman Reingold" default, escalar y centrar.</li>
+<li> Aplicar apariencia nodos: </li>
+  <ul>
+    <li>Color --> Particion -> Product</li>
+    <li>Tamaño --> Ranking -> pindex</li>
+    <li>Color de etiqueta --> Ranking -> grado (cambiar color a tonos azules)</li>
+  </ul>   
+<li>Aplicar apariencia aristas:  </li>
+    <ul>
+    <li>Color --> Ranking -> peso (cambiar color a tonos rojos)</li>
+  </ul>   
+<li>Mostrar etiquetas de nodos.  </li>
+</ol>
     
     
-    <i>show</i> </li>
+    
 </ol>
     
 
