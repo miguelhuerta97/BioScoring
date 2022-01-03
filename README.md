@@ -174,8 +174,14 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
     
 
     
-<li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> con el nombre <i>results.graphml</i> con el siguiente formato</li>    
+<li>Si se desea visualizar la red generada se ha desarrllado una función por medio de la herramienta <a href="https://networkx.org/documentation/stable/index.html"><i>NetworkX</i></a>, la cual 
+    
+    
+    <i>show</i> </li>
 </ol>
+    
+
+
 
 
 
@@ -194,7 +200,7 @@ from BioScoring.COde.graph import CreateGraph
 path  = '..../project/'
 # Procesamiento de datos (puntos 1-2-3-4)
 graph = CreateGraph(path, MaxCosSimil=True) # default MaxCosSimil=True 
-# Exportación de resultados (puntos 5-6)
+# Exportación de resultados (puntos 5-6-7)
 graph('CEPA', scoreX='identity_percent', show=True)    # default scoreX='identity_percent'
 ```
 ## Referencias y desarrollos empleados 
