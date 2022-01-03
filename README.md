@@ -154,7 +154,7 @@ pip install ...
 from proposal.graph import CreateGraph 
 path  = '..../project/'
 graph = CreateGraph(path, MaxCosSimil=True) # default MaxCosSimil=True 
-graph('CEPA', scoreX='identity_percent') # default MaxCosSimil='identity_percent'
+graph('CEPA', scoreX='identity_percent')    # default scoreX='identity_percent'
 ```
 ## Referencias y desarrollos empleados 
 La estructura propuesta basa su desarrollo:
