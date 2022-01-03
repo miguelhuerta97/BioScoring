@@ -11,10 +11,10 @@ class processing_metrics:
     """Carga de archivos auxiliares y del usuario"""
     #===================================================================================================
     # Carga de archivos auxiliares
-    self.internal_map = pd.read_csv('./proposal/data/matched_mibig_gnps_update.csv'.replace('/',os.path.sep))
+    self.internal_map = pd.read_csv('./COde/data/matched_mibig_gnps_update.csv'.replace('/',os.path.sep))
     self.BGCs  = self.internal_map.mibig_id.unique()
     self.GNPSs = self.internal_map['# mgf_spectrum_id'].unique()
-    ms1, ms2, metadata = LoadMGF(name_field='scans').load_spectra(['./proposal/data/matched_mibig_gnps_update.mgf'.replace('/',os.path.sep)])
+    ms1, ms2, metadata = LoadMGF(name_field='scans').load_spectra(['./COde/data/matched_mibig_gnps_update.mgf'.replace('/',os.path.sep)])
     self.spectrum_inter = mols_to_spectra(ms2, metadata)
 
     self.clustersum    = None
