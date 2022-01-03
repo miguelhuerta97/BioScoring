@@ -190,7 +190,11 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
   </ul>   
 <li>Mostrar etiquetas de nodos.  </li>
 </ol>
-Para activar está función basta con fijar la propiedad <i>show</i>=True.
+Para activar está función basta con fijar la propiedad <i>show</i>=True. No es posible exportar está configuración, con lo cual si se desea obtener resultados similares es necesario seguir los pasos anteriores en <a href="https://gephi.org/"><i>Gephi</i></a> u algun otro software de similares caracteristicas.
+    
+
+
+    
 </ol>
     
 ## Instalación y puesta en marcha
