@@ -180,7 +180,7 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
 Para utilizar la herramienta, es necesario descargar el proyecto y tenerlo localmente. Una alternativa es utilizar el siguiente comando.
     
 ```bash
-git clone https://github.com/miguelhuerta97/BioScoring
+git clone https:/github.com/miguelhuerta97/BioScoring
 ```
 
 Ejemplo de puesta en marcha
