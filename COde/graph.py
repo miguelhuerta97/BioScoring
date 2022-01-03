@@ -4,6 +4,7 @@ from .export import processing_metrics
 import time as time
 import numpy as np
 import matplotlib.pyplot as plt
+import networkx as nx
 
 class CreateGraph:
   def __init__(self, ProjectPath, MaxCosSimil=True):
@@ -16,10 +17,11 @@ class CreateGraph:
     print('Los strains dispinibles son: ', list(self.df['CEPA'].unique()))
     self.mat = scipy.io.loadmat('./COde/data/matrix_internal_map.mat'.replace('/',os.path.sep))['num'][1:,1:]
 
-  def __call__(self, strain, scoreX='identity_percent'):
+  def __call__(self, strain, scoreX='identity_percent', paretobias=1, edgebias=0.4, gephiConfig=[100, 50, 1],
+                    FR=3.5, node_color="jet", edge_color="Reds", figsize=(14,14), show=True):
     self.BST_Pareto(strain, scoreX=scoreX)
-    self.BST_Export()
-  
+    self.BST_Export(paretobias=paretobias, edgebias=edgebias, gephiConfig=gephiConfig)
+    if show: self.configGraph(FR=FR, node_color=node_color, edge_color=edge_color, figsize=figsize, gephiConfig=gephiConfig)   
 
   def BST_Pareto(self, strain, flagProblem=1,  scoreX='identity_percent'):
     if flagProblem==1:
@@ -52,9 +54,12 @@ class CreateGraph:
   
   def BST_Export(self, paretobias=1, edgebias=0.4, gephiConfig=[100, 50, 1]):
     gephiposscale, gephinodesize, gephiedgescale = gephiConfig
-    NAME = self.dfx['user_BGC'].values  
-    PRODUCT = self.dfx['mibig_product'].values
+    NAME    = self.dfx['user_BGC'].values  
+    PRODUCT = self.df['mibig_product'].values # El profe en su doc lo tiene así
+
     print(' (3) Impresión archivo graphml ...')  
+    try: os.remove(self.metrics.OutputPath+os.path.sep+'results.graphml')
+    except: pass
     gmlfn=self.metrics.OutputPath+os.path.sep+'results.graphml'
     print('       escribiendo archivo "%s"\n'%(gmlfn))
     fid = open(gmlfn, "a")
@@ -77,7 +82,8 @@ class CreateGraph:
     colors = np.array([colors(j) for j in range(paretobias+1)])[:,:-1]*255*2
     idx2plot = np.where(self.paretoindex<=paretobias)[0]+1
     maxpi    = np.max(self.paretoindex)
-    for i in idx2plot:
+
+    for i in idx2plot:      
       name=NAME[i-1]
       product=PRODUCT[i-1]
       pidx=self.paretoindex[i-1]
@@ -95,9 +101,10 @@ class CreateGraph:
       fid.write('            <data key="y">%.4f</data>\n'%(valy))
       fid.write('        </node>\n')
     #edges
-    
-    for i in idx2plot:   ###### revisar que coincida con el id real
-      for j in idx2plot: ###### revisar que coincida con el id real
+    print(len(idx2plot))
+
+    for i in idx2plot:
+      for j in idx2plot:
         nameI=NAME[i-1]
         nameJ=NAME[j-1]
         we = gephiedgescale*self.mat[self.dfx.iloc[i-1].Id, self.dfx.iloc[j-1].Id]
@@ -109,11 +116,52 @@ class CreateGraph:
     fid.write('</graphml>\n')
     fid.close()
 
+  def configGraph(self, FR=3.5, node_color="jet", edge_color="Reds", gephiConfig=[100, 50, 5], figsize=(14,14)):
+    gephiposscale, gephinodesize, gephiedgescale = gephiConfig
+    G=nx.readwrite.graphml.read_graphml(self.metrics.OutputPath+os.path.sep+'results.graphml')
 
+    # Color de etiqueta --> Ranking -> grado (cambiar color a tonos azules)
+    mapping = {k[0]: k[1]['label'] for k in G.nodes(data=True)}
+    G = nx.relabel_nodes(G, mapping)
 
+    # 1) Aplicar distribución "Fruchterman Reingold" default, escalar y centrar.
+    pos = nx.fruchterman_reingold_layout(G,FR)
+    for node, (x,y) in pos.items():
+      G.nodes[node]['x'] = float(x)
+      G.nodes[node]['y'] = float(y)
 
+    # 2) Aplicar apariencia nodos: Color --> Particion -> Product
+    product = np.array([k[1]['product'] for k in list(G.nodes(data=True))])
+    colors = plt.cm.get_cmap(node_color, len(np.unique(product)))
+    colors = np.array([colors(j) for j in range(len(np.unique(product)))])[:,:-1]
+    colors = {k:colors[n] for n,k in enumerate(np.unique(product))}
+    node_color = np.array([colors[k[1]['product']] for k in list(G.nodes(data=True))])
+    
+    # Tamaño --> Ranking -> pindex (normalización min-max)
+    plist = np.array([k[1]['pindex'] for k in list(G.nodes(data=True))])
+    nlist = len(np.unique(plist))
+    pmax  = np.nanmax(plist)
+    pmin  = np.nanmin(plist)
+    sizes = ((plist-pmin)/(pmax-pmin)+1)*gephinodesize
 
+    # 3) Aplicar apariencia aristas: Color --> Ranking -> peso (cambiar color a tonos rojos)
+    wlist = np.sort(np.array([k[2]['weight'] for k in list(list(G.edges(data=True)))]))
+    cmap = plt.cm.get_cmap(edge_color, len(np.unique(wlist)))#.reversed() 
+    colors = np.array([cmap(j) for j in range(len(np.unique(wlist)))])[:,:-1]
+    colors = {k:colors[n] for n,k in enumerate(np.unique(wlist))}
+    edge_color = np.array([colors[k[2]['weight']] for k in list(list(G.edges(data=True)))])
+    edge_width = np.array([k[2]['weight']*gephiedgescale for k in list(list(G.edges(data=True)))])
 
+    # Show graph
+    fig=plt.figure(figsize=figsize)
+    gs = plt.GridSpec(1, 2, width_ratios=[20, 1])
+    ax=plt.subplot( gs[0,0] )
+    nx.draw(G,pos=pos,node_size = sizes,node_color=node_color, edge_color=edge_color, with_labels=True, font_color="#1E90FF", width=edge_width, ax=ax)
+    # nx.draw(G,pos=pos,node_color=node_color, edge_color=edge_color, with_labels=True, font_color="#1E90FF", width=edge_width, ax=ax)
 
-
-
+    ax=plt.subplot( gs[0,1] )
+    sm = plt.cm.ScalarMappable(cmap=cmap, norm=plt.Normalize(vmin = np.min(wlist), vmax=np.max(wlist)))
+    sm._A = []
+    plt.colorbar(sm, cax=ax)
+    ax.title.set_text('Edge weight')
+    plt.show()
