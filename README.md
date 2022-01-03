@@ -149,7 +149,7 @@ Asociado al punto (4), la propuesta por defecto rescata unicamente aquel esprect
 ```python
 from proposal.graph import CreateGraph 
 path  = '..../project/'
-graph = CreateGraph(path)
+graph = CreateGraph(path, MaxCosSimil=True)
 ```
 ## Referencias y desarrollos empleados 
 La estructura propuesta basa su desarrollo:
