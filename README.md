@@ -145,8 +145,11 @@ Realizada la lectura de datos, la propuesta opera como sigue:
 Asociado al punto (4), la propuesta por defecto rescata unicamente aquel esprectrograma con mayor indice de similitud. Para desactivar dicha función se debe cambiar la opción _MaxCosSimil_ a False en la función _CreateGraph_. En lo que respecta a los archivos de salida, estos se guardan en la carpeta /output/ generada en la carpeta del proyecto.
 
 
-
-
+## Instalación y puesta en marcha
+```
+print('aa')
+}
+```
 ## Referencias y desarrollos empleados 
 La estructura propuesta basa su desarrollo:
 - [NPLinker](https://github.com/sdrogers/nplinker) utilizando parte del código y base de datos para el tratamiento de datos de entrada.
