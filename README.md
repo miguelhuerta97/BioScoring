@@ -177,10 +177,14 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
 
 
 ## Instalación y puesta en marcha
+Para utilizar la herramienta, es necesario descargar el projecto y tenerlo localmente. Una alternativa es utilizar el siguiente comando.
+    
 ```bash
 git clone https://github.com/miguelhuerta97/BioScoring
 ```
 
+Ejemplo de puesta en marcha
+    
 ```python
 from BioScoring.COde.graph import CreateGraph
 path  = '..../project/'
