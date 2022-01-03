@@ -153,7 +153,7 @@ pip install ...
 ```python
 from proposal.graph import CreateGraph 
 path  = '..../project/'
-graph = CreateGraph(path, MaxCosSimil=True)
+graph = CreateGraph(path) # default MaxCosSimil=True
 ```
 ## Referencias y desarrollos empleados 
 La estructura propuesta basa su desarrollo:
