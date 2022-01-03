@@ -166,7 +166,9 @@ pip install ...
 ```python
 from proposal.graph import CreateGraph 
 path  = '..../project/'
+# Procesamiento de datos (puntos 1-2-3-4)
 graph = CreateGraph(path, MaxCosSimil=True) # default MaxCosSimil=True 
+# Exportación de resultados (puntos 5-6)
 graph('CEPA', scoreX='identity_percent')    # default scoreX='identity_percent'
 ```
 ## Referencias y desarrollos empleados 
