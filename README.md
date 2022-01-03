@@ -136,8 +136,18 @@ Realizada la lectura de datos, la propuesta opera como sigue:
         └── output.csv
     
   
-  <li>Concluido el procesamiento de datos, la propuesta procede a establecer el frente de pareto estableciendo por defecto la relación <i>identity_percent</i> y <i>simil_cos</i>,  </li>
+  <li>Concluido el procesamiento de datos, la propuesta procede a establecer el frente de pareto teniendo por defecto la relación <i>identity_percent</i> y <i>simil_cos</i>. El primer término (asociado a los BGC) puede ser modificado al configurar el párametro <i>scoreX</i>, teniendo como opciones:
+  <ul>
+    <li>Coverage_percent</li>
+    <li>BLAST_Score</li>
+    <li>E_value</li>
+  </ul>
+    
+    
+    </li>
   
+
+    
   <li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> c</li>
     
     .
@@ -148,9 +158,6 @@ Realizada la lectura de datos, la propuesta opera como sigue:
   
 </ol>
 
-
-
-Asociado al punto (4), la propuesta por defecto rescata unicamente aquel esprectrograma con mayor indice de similitud. Para desactivar dicha función se debe cambiar la opción _MaxCosSimil_ a False en la función _CreateGraph_. En lo que respecta a los archivos de salida, estos se guardan en la carpeta /output/ generada en la carpeta del proyecto.
 
 
 ## Instalación y puesta en marcha
