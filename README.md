@@ -172,7 +172,9 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
         ├── output.csv
         └── results.graphml    
     
-    <li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> con el nombre <i>results.graphml</i> con el siguiente formato</li>    
+
+    
+<li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> con el nombre <i>results.graphml</i> con el siguiente formato</li>    
 </ol>
 
 
