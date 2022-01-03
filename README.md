@@ -146,7 +146,7 @@ Realizada la lectura de datos, se opera como sigue:
   
 
     
-  <li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> c</li>
+  <li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> con el nombre <i>results.graphml</i> </li>
     
     .
     ├── input
@@ -154,8 +154,13 @@ Realizada la lectura de datos, se opera como sigue:
         ├── output.csv
         └── results.graphml
   
+    
+    
 </ol>
 
+```xml
+<key attr.name="id" attr.type="string" for="node" id="id"/>
+```
 
 
 ## Instalación y puesta en marcha
