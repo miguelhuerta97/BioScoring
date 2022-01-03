@@ -177,8 +177,8 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
 
 
 ## Instalación y puesta en marcha
-```python
-pip install ...
+```bash
+git clone https://github.com/sdrogers/nplinker
 ```
 
 ```python
