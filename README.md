@@ -128,7 +128,33 @@ Realizada la lectura de datos, la propuesta opera como sigue:
   </li>
   Este <i>dataframe</i> es exportado en formato CSV con el nombre <i>output.csv</i>.
   
-  
+      .
+    ├── input
+    │   ├── antismash
+    │   │   ├── CEPA_1
+    │   │   │   ├── knownclusterblast 
+    │   │   │   │   ├── region1
+    │   │   │   │   │   ├── table_1....html
+    │   │   │   │   │   ├── table_2....html
+    │   │   │   │   │   └── ...
+    │   │   │   │   ├── region2
+    │   │   │   │   │   ├── table_1....html
+    │   │   │   │   │   ├── table_2....html
+    │   │   │   │   │   └── ...
+    │   │   │   │   └── ...
+    │   │   ├── CEPA_2
+    │   │   │   ├── knownclusterblast 
+    │   │   │   │   ├── region1
+    │   │   │   │   │   ├── table_1....html
+    │   │   │   │   │   ├── table_2....html
+    │   │   │   │   │   └── ...
+    │   │   │   │   ├── region2
+    │   │   │   │   │   ├── table_1....html
+    │   │   │   │   │   ├── table_2....html
+    │   │   │   │   │   └── ...
+    │   │   │   │   └── ...
+    │   │   └── ......
+    └── ...
   
   <li>Concluido el procesamiento de datos, la propuesta procede a establecer el frente de pareto estableciendo por defecto la relación <i>identity_percent</i> y <i>simil_cos</i>,  </li>
   
