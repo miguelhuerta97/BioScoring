@@ -1,5 +1,5 @@
 # BioScoring
-Desarrollo enfocado en la predicción de compuestos por medio del cáculo de métricas a partir de los datos obtenidos del análisis genómico y de espectrometría. 
+Desarrollo enfocado en la predicción de compuestos por medio del cálculo de métricas a partir de los datos obtenidos del análisis genómico y de espectrometría. 
 
 ## Espectrometría
 Empleando como información de entrada el análisis efectuado por [antiSMASH](https://antismash.secondarymetabolites.org/#!/start) por medio su plataforma web, la propuesta enfoca sus esfuerzos en el procesamiento de las predicciones tabuladas en formato html, adjuntas en la carpeta /knownclusterblast/ relativa a cada cepa incluida en el análisis.
@@ -41,7 +41,7 @@ Empleando como información de entrada el análisis efectuado por [GNPS](https:/
   - METABOLOMICS.mgf.
 
 ## Flujo de trabajo
-Por como esta configurada la propuesta, está efectua la lectura, filtrado y verificación de archivos necesarios dejados en la carpeta /input/ del proyecto, de modo que solo es necesario extraer todos los archivos de [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) en la carpeta /input/ y los de [antiSMASH](https://antismash.secondarymetabolites.org/#!/start) en una subcarpeta /input/antismash/, quedando la siguiente estructura:
+Por como está configurada la propuesta, está efectúa la lectura, filtrado y verificación de archivos necesarios dejados en la carpeta /input/ del proyecto, de modo que solo es necesario extraer todos los archivos de [GNPS](https://gnps.ucsd.edu/ProteoSAFe/static/gnps-splash.jsp) en la carpeta /input/ y los de [antiSMASH](https://antismash.secondarymetabolites.org/#!/start) en una subcarpeta /input/antismash/, quedando la siguiente estructura:
 
     .
     ├── input
@@ -59,7 +59,7 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
 Realizada la lectura de datos, se opera como sigue:
 
 <ol>
-  <li>Ordena y agrupa todas las tablas html en un único <i>dataframe</i>, el cual esta constituido por:</li>
+  <li>Ordena y agrupa todas las tablas html en un único <i>dataframe</i>, el cual está constituido por:</li>
   <ul>
     <li>user_BGC</li>
     <li>CEPA</li>
@@ -72,7 +72,7 @@ Realizada la lectura de datos, se opera como sigue:
     <li>E_value</li>
   </ul>
   
-  <li>Se condensa la información genómica a nivel de BGC, promediando las métricas <i>identity_percent</i>, <i>Coverage_percent</i>, <i>BLAST_Score</i> y <i>E_value</i>, añadendo como atributo el número de genes que componen a cada BGC, resultando:
+  <li>Se condensa la información genómica a nivel de BGC, promediando las métricas <i>identity_percent</i>, <i>Coverage_percent</i>, <i>BLAST_Score</i> y <i>E_value</i>, añadiendo como atributo el número de genes que componen a cada BGC, resultando:
    <ul>
     <li>user_BGC</li>
     <li>CEPA</li>
@@ -85,7 +85,7 @@ Realizada la lectura de datos, se opera como sigue:
     <li>E_value</li>
   </ul>
     
-  <li>Se compará el listado de BGC resultantes con los contenidos en <a href="https://github.com/miguelhuerta97/Bio-Scoring/blob/main/proposal/data/matched_mibig_gnps_update.csv"><i>matched_mibig_gnps_update.csv</i></a> (rescatado de <a href="https://github.com/sdrogers/nplinker">NPLinker</a>), filtrando aquellos que no estén contenidos en el archivo interno. Por su parte, los elementos que si están contenidos se les añade los atributos <i>mibig_inchi</i>, <i>mibig_smiles</i> y <i>mibig_name</i> (equivalente al compuesto), resultando en:
+  <li>Se compara el listado de BGC resultantes con los contenidos en <a href="https://github.com/miguelhuerta97/Bio-Scoring/blob/main/proposal/data/matched_mibig_gnps_update.csv"><i>matched_mibig_gnps_update.csv</i></a> (rescatado de <a href="https://github.com/sdrogers/nplinker">NPLinker</a>), filtrando aquellos que no estén contenidos en el archivo interno. Por su parte, los elementos que si están contenidos se les añade los atributos <i>mibig_inchi</i>, <i>mibig_smiles</i> y <i>mibig_name</i> (equivalente al compuesto), resultando en:
   <ul>
     <li>user_BGC</li>
     <li>CEPA</li>
@@ -136,7 +136,7 @@ Realizada la lectura de datos, se opera como sigue:
         └── output.csv
     
   
-  <li>Concluido el procesamiento de datos, se procede a establecer el frente de pareto teniendo por defecto la relación <i>identity_percent</i> y <i>simil_cos</i>. El primer término (asociado a los BGC) puede ser modificado al configurar el párametro <i>scoreX</i>, teniendo como opciones:
+  <li>Concluido el procesamiento de datos, se procede a establecer el frente de Pareto teniendo por defecto la relación <i>identity_percent</i> y <i>simil_cos</i>. El primer término (asociado a los BGC) puede ser modificado al configurar el parámetro <i>scoreX</i>, teniendo como opciones:
   <ul>
     <li>Coverage_percent</li>
     <li>BLAST_Score</li>
@@ -164,7 +164,7 @@ Realizada la lectura de datos, se opera como sigue:
     <key attr.name="weight" attr.type="double" for="edge" id="weight"/>    # internal_score*gephiedgescale
     ....
 ```
-donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustables por el usuario, mientras que la determinación del código de colores esta asociada a ranking dentro de la deteminación del frente de pareto. El atributo <i>weight</i> incluye en la solución el nivel de correlación entre los BGC del archivo <a href="https://github.com/miguelhuerta97/Bio-Scoring/blob/main/proposal/data/matched_mibig_gnps_update.csv"><i>matched_mibig_gnps_update.csv</i></a> empleando nuevamente <a href="https://en.wikipedia.org/wiki/Cosine_similarity"><i>Cosine similarity</i></a> sobre los <i>fingerprint</i>, tal como se describe en el documento <a href="https://github.com/miguelhuerta97/Bio-Scoring/blob/main/Smiles.ipynb"><i>Smiles.ipynb</i></a>. Para la obtención de estas propiedades se empleó la herramienta <a href="https://github.com/sebotic/cdk_pywrapper"><i>cdk_pywrapper</i></a>. En consecuencia, los archivos de salida son:
+donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustables por el usuario, mientras que la determinación del código de colores está asociada a ranking dentro de la determinación del frente de Pareto. El atributo <i>weight</i> incluye en la solución el nivel de correlación entre los BGC del archivo <a href="https://github.com/miguelhuerta97/Bio-Scoring/blob/main/proposal/data/matched_mibig_gnps_update.csv"><i>matched_mibig_gnps_update.csv</i></a> empleando nuevamente <a href="https://en.wikipedia.org/wiki/Cosine_similarity"><i>Cosine similarity</i></a> sobre los <i>fingerprint</i>, tal como se describe en el documento <a href="https://github.com/miguelhuerta97/Bio-Scoring/blob/main/Smiles.ipynb"><i>Smiles.ipynb</i></a>. Para la obtención de estas propiedades se empleó la herramienta <a href="https://github.com/sebotic/cdk_pywrapper"><i>cdk_pywrapper</i></a>. En consecuencia, los archivos de salida son:
     
     .
     ├── input
@@ -177,7 +177,7 @@ donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustab
 
 
 ## Instalación y puesta en marcha
-Para utilizar la herramienta, es necesario descargar el projecto y tenerlo localmente. Una alternativa es utilizar el siguiente comando.
+Para utilizar la herramienta, es necesario descargar el proyecto y tenerlo localmente. Una alternativa es utilizar el siguiente comando.
     
 ```bash
 git clone https://github.com/miguelhuerta97/BioScoring
