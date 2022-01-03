@@ -147,7 +147,9 @@ Asociado al punto (4), la propuesta por defecto rescata unicamente aquel esprect
 
 ## Instalación y puesta en marcha
 ```python
-print('aa')
+from proposal.graph import CreateGraph 
+path  = '..../project/'
+graph = CreateGraph(path)
 ```
 ## Referencias y desarrollos empleados 
 La estructura propuesta basa su desarrollo:
