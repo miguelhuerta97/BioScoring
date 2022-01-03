@@ -44,9 +44,6 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
     .
     ├── input
     │   ├── antismash
-    │   │   ├── CEPA_1
-    │   │   ├── CEPA_2
-    │   │   └── ......
     │   ├── clusterinfo
     │   ├── clusterinfosumary...
     │   │   └── ....clusterinfosumary
