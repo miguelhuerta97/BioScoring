@@ -164,7 +164,9 @@ Realizada la lectura de datos, se opera como sigue:
     <key attr.name="weight" attr.type="double" for="edge" id="weight"/>    # internal_score*gephiedgescale
     ....
 ```
-donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustables por el usuario. 
+donde <i>gephinodesize</i> y <i>gephiedgescale</i> son opciones graficas ajustables por el usuario, mientras que la determinación del código de colores esta asociada a ranking dentro de la deteminación del frente de pareto. El atributo <i>weight</i> incluye en la solución el nivel de correlación entre los BGC del archivo <i>matched_mibig_gnps_update.csv</i> empleando nuevamente <a href="https://en.wikipedia.org/wiki/Cosine_similarity"><i>Cosine similarity</i></a> pero desde un nuevo enfoque.
+    
+    
     
 En consecuencia, los archivos de salida son
     
@@ -172,10 +174,7 @@ En consecuencia, los archivos de salida son
     ├── input
     └── output
         ├── output.csv
-        └── results.graphml
-  
-    
-    
+        └── results.graphml    
 </ol>
 
 
