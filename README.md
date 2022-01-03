@@ -146,24 +146,25 @@ Realizada la lectura de datos, se opera como sigue:
   
 
     
-  <li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> con el nombre <i>results.graphml</i> </li>    
+  <li>Concatenado con el punto anterior, se exporta un archivo <i>graphml</i> con el nombre <i>results.graphml</i> con el siguiente formato</li>    
     
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns">
-    <key attr.name="id" attr.type="string" for="node" id="id"/>
-    <key attr.name="product" attr.type="string" for="node" id="product"/>
-    <key attr.name="pindex" attr.type="int" for="node" id="pindex"/>
-    <key attr.name="label" attr.type="string" for="node" id="label"/>
-    <key attr.name="size" attr.type="float" for="node" id="size"/>
-    <key attr.name="r" attr.type="int" for="node" id="r"/>
-    <key attr.name="g" attr.type="int" for="node" id="g"/>
-    <key attr.name="b" attr.type="int" for="node" id="b"/>
-    <key attr.name="x" attr.type="float" for="node" id="x"/>
-    <key attr.name="y" attr.type="float" for="node" id="y"/>
-    <key attr.name="weight" attr.type="double" for="edge" id="weight"/>
+    <key attr.name="id" attr.type="string" for="node" id="id"/>            # user_BGC
+    <key attr.name="product" attr.type="string" for="node" id="product"/>  # mibig_name
+    <key attr.name="pindex" attr.type="int" for="node" id="pindex"/>       # pareto index
+    <key attr.name="label" attr.type="string" for="node" id="label"/>      # mibig_name
+    <key attr.name="size" attr.type="float" for="node" id="size"/>         # gephinodesize
+    <key attr.name="r" attr.type="int" for="node" id="r"/>                 # 0-255
+    <key attr.name="g" attr.type="int" for="node" id="g"/>                 # 0-255
+    <key attr.name="b" attr.type="int" for="node" id="b"/>                 # 0-255
+    <key attr.name="x" attr.type="float" for="node" id="x"/>               # scoreX value
+    <key attr.name="y" attr.type="float" for="node" id="y"/>               # scoreY value (simil_cos)
+    <key attr.name="weight" attr.type="double" for="edge" id="weight"/>    # value 
     ....
 ```
+
     
 En consecuencia, los archivos de salida son
     
