@@ -45,20 +45,16 @@ Por como esta configurada la propuesta, está efectua la lectura, filtrado y ver
     ├── input
     │   ├── antismash
     │   ├── clusterinfo
-    │   ├── clusterinfosumary...
-    │   │   └── ....clusterinfosumary
+    │   ├── clusterinfosummary...
+    │   │   └── ....clusterinfosummary
     │   ├── gnps_molecular_network_graphml
-    │   ├── groupmapping_converted
-    │   ├── networkedges_selfloop
+    │   ├── groupmapping_convertm
     │   ├── qiime2_output
     │   ├── result_specnets_DB
     │   └── METABOLOMICS....mgf
     └── ...
 
 Realizada la lectura de datos, la propuesta opera como sigue:
-
-
-
 
 <ol>
   <li>Ordena y agrupa todas las tablas html en un único <i>dataframe</i>, el cual esta constituido por:</li>
