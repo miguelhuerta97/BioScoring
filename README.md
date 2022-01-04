@@ -211,8 +211,11 @@ path  = '..../project/'
 # Procesamiento de datos (puntos 1-2-3-4)
 graph = CreateGraph(path, MaxCosSimil=True) # default MaxCosSimil=True 
 # Exportación de resultados (puntos 5-6-7)
-graph('CEPA', scoreX='identity_percent', show=True)    # default scoreX='identity_percent'
+graph('CEPA', scoreX='identity_percent', show=True, paretobias=1)    # default scoreX='identity_percent', paretobias=1 # entero
 ```
+    
+Del código adjunto cabe señalar que el parámetro _paretobias_ permite relajar el filtro aplicado sobre el frente de pareto, a un mayor valor de este índice más relajada es la solución.
+    
 ## Referencias y desarrollos empleados 
 La estructura propuesta basa su desarrollo:
 - [NPLinker](https://github.com/sdrogers/nplinker) utilizando parte del código y base de datos para el tratamiento de datos de entrada.
